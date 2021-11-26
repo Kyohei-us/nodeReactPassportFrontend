@@ -1,3 +1,4 @@
+import ResponsiveGrid from "../components/responsiveGrid";
 import useFetchYoutubeLikedVideos from "../hooks/useFetchYoutubeLikedVideos";
 
 const YoutubeLikedVideos = () => {
@@ -5,7 +6,11 @@ const YoutubeLikedVideos = () => {
   return (
     <>
       <div>
-        {youtubeLikedVideos ? youtubeLikedVideos.data.kind : "Loading..."}
+        {youtubeLikedVideos ? (
+          <ResponsiveGrid contents={youtubeLikedVideos.data.items} />
+        ) : (
+          "Loading..."
+        )}
       </div>
     </>
   );
