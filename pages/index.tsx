@@ -19,9 +19,21 @@ const Home: NextPage = () => {
         </h1>
 
         <div>
-          <a href="https://nodereactpassport.herokuapp.com/api/youtube/auth/youtube">
+          <button
+            onClick={(ev) => {
+              ev.preventDefault();
+              window.open(
+                "http://localhost:3000/api/youtube/auth/youtube",
+                "_self"
+              );
+            }}
+          >
             Login to Youtube
-          </a>
+          </button>
+        </div>
+
+        <div>
+          <a href="/youtubeLikedVideos">See Liked Videos</a>
         </div>
 
         <p className={styles.description}>
