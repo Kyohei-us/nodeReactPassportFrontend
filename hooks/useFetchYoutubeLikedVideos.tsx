@@ -19,7 +19,7 @@ export default function useFetchYoutubeLikedVideos() {
         },
       };
       let ret = await axios(options);
-      // setResponse(ret);
+      setResponse(ret);
       console.log(ret);
     };
     result();
