@@ -22,7 +22,7 @@ export default function ResponsiveGrid(props: { contents: any[] }) {
       >
         {Array.from(contents).map((ele, index) => (
           <Grid item xs={4} sm={4} md={3} key={index}>
-            <Item>{ele}</Item>
+            <Item>{ele.snippet.title || ele}</Item>
           </Grid>
         ))}
       </Grid>
