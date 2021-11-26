@@ -12,10 +12,10 @@ export default function useFetchYoutubeLikedVideos() {
       let options: AxiosRequestConfig = {
         url: url,
         method: "get",
+        withCredentials: true,
         headers: {
           Accept: "application/json",
           "Content-Type": "application/json",
-          "Access-Control-Allow-Origin": "*",
         },
       };
       let ret = await axios(options);
