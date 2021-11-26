@@ -24,7 +24,7 @@ const Home: NextPage = () => {
             onClick={(ev) => {
               ev.preventDefault();
               window.open(
-                "http://localhost:3000/api/youtube/auth/youtube",
+                "https://nodereactpassport.herokuapp.com/api/youtube/auth/youtube",
                 "_self"
               );
             }}
