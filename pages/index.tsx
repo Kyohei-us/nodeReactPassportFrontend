@@ -1,6 +1,7 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
+import Link from "next/link";
 import ResponsiveGrid from "../components/responsiveGrid";
 import styles from "../styles/Home.module.css";
 
@@ -33,7 +34,7 @@ const Home: NextPage = () => {
         </div>
 
         <div>
-          <a href="/youtubeLikedVideos">See Liked Videos</a>
+          <Link href="/youtubeLikedVideos">See Liked Videos</Link>
         </div>
 
         <p className={styles.description}>
