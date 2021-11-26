@@ -2,7 +2,7 @@ import axios, { AxiosRequestConfig, AxiosResponse } from "axios";
 import { useEffect, useState } from "react";
 
 export default function useFetchYoutubeLikedVideos() {
-  let baseURL = `http://nodereactpassport.herokuapp.com`;
+  let baseURL = `https://nodereactpassport.herokuapp.com`;
   let url = `${baseURL}/api/youtube/getLikedVideos`;
 
   const [response, setResponse] = useState<AxiosResponse>();
