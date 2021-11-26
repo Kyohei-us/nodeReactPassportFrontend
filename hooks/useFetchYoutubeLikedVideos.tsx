@@ -15,6 +15,7 @@ export default function useFetchYoutubeLikedVideos() {
         headers: {
           Accept: "application/json",
           "Content-Type": "application/json",
+          "Access-Control-Allow-Origin": "*",
         },
       };
       let ret = await axios(options);
