@@ -7,7 +7,11 @@ const YoutubeLikedVideos = () => {
     <>
       <div>
         {youtubeLikedVideos ? (
-          <ResponsiveGrid contents={youtubeLikedVideos.data.items} />
+          <ResponsiveGrid
+            contents={youtubeLikedVideos.data.items.map(
+              (ele: any) => ele.snippet.title
+            )}
+          />
         ) : (
           "Loading..."
         )}
