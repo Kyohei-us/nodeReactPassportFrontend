@@ -5,7 +5,7 @@ import styles from "../styles/YoutubeLikedVideos.module.css"
 const YoutubeLikedVideos = () => {
   const youtubeLikedVideos = useFetchYoutubeLikedVideos();
   return (
-    <div>
+    <div className={styles.container}>
       <main className={styles.main}>
         {youtubeLikedVideos ? (
           <ResponsiveGrid
