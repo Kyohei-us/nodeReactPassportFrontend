@@ -13,6 +13,7 @@ const Home: NextPage = () => {
       <main className={styles.main}>
         <div>
           <button
+            className={styles.button24}
             onClick={(ev) => {
               ev.preventDefault();
               window.open(
