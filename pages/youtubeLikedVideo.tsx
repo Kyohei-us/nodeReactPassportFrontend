@@ -4,11 +4,14 @@ import useFetchYoutubePopularVideos from "../hooks/useFetchYoutubeChannelPopular
 
 const YoutubeLikedVideo = () => {
     const router = useRouter();
-    const channelId = router.query.channelId;
-    let mainBody = null;
-    if (channelId && typeof(channelId) == "string") {
-        mainBody = useFetchYoutubePopularVideos(channelId);
+    let channelId = router.query.channelId;
+    if (!channelId) {
+        channelId = ""
     }
+    if (typeof(channelId) !== "string"){
+        channelId = ""
+    }
+    const mainBody = useFetchYoutubePopularVideos(channelId);
   return (
     <div>
       <main>
@@ -16,8 +19,8 @@ const YoutubeLikedVideo = () => {
             <>
                 <h1>{mainBody.data.items[0].snippet.channelTitle}</h1>
                 {
-                    mainBody.data.items.map((ele: any) => {
-                        return <div>
+                    mainBody.data.items.map((ele: any, index: number) => {
+                        return <div key={index}>
                             {ele.title}
                         </div>
                     })
