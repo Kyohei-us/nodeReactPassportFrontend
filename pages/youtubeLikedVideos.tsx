@@ -4,8 +4,8 @@ import useFetchYoutubeLikedVideos from "../hooks/useFetchYoutubeLikedVideos";
 const YoutubeLikedVideos = () => {
   const youtubeLikedVideos = useFetchYoutubeLikedVideos();
   return (
-    <>
-      <div>
+    <div>
+      <main style={{width: "80vw"}}>
         {youtubeLikedVideos ? (
           <ResponsiveGrid
             contents={youtubeLikedVideos.data.items.map(
@@ -15,8 +15,8 @@ const YoutubeLikedVideos = () => {
         ) : (
           "Loading..."
         )}
-      </div>
-    </>
+      </main>
+    </div>
   );
 };
 
