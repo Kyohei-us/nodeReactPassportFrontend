@@ -23,7 +23,7 @@ const YoutubeLikedVideo = () => {
                         return <div key={index}>
                             {ele.snippet.title}: 
                             <iframe width="640" height="360"
-                            src={"https://www.youtube.com/embed/" + ele.snippet.id.videoId + "?autoplay=0"}
+                            src={"https://www.youtube.com/embed/" + ele.id.videoId + "?autoplay=0"}
                             ></iframe>
                         </div>
                     })
