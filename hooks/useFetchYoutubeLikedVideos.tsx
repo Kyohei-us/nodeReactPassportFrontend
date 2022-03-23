@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 
 export default function useFetchYoutubeLikedVideos() {
   let baseURL = `https://nodereactpassport.herokuapp.com`;
-  let url = `${baseURL}/api/youtube/getLikedVideos`;
+  let url = `${baseURL}/api/youtube/likedVideos`;
 
   const [response, setResponse] = useState<AxiosResponse>();
 
