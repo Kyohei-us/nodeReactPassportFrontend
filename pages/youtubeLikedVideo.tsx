@@ -13,17 +13,16 @@ const YoutubeLikedVideo = () => {
     <div>
       <main>
         { mainBody ? (
-            mainBody.data.items.map((ele: any, index: number) => {
-                if (index == 0){
-                    return <>
-                        <h1>{ele.snippet.channelTitle}</h1>
-                        <div>{ele.title}</div>
-                    </>
+            <>
+                <h1>{mainBody.data.items[0].snippet.channelTitle}</h1>
+                {
+                    mainBody.data.items.map((ele: any) => {
+                        return <div>
+                            {ele.title}
+                        </div>
+                    })
                 }
-                return <div>
-                    {ele.title}
-                </div>
-            })
+            </>
         ) : (
           "Loading..."
         )}
