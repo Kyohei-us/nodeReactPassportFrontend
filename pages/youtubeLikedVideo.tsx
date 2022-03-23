@@ -22,7 +22,7 @@ const YoutubeLikedVideo = () => {
                     mainBody.data.items.map((ele: any, index: number) => {
                         return <div key={index}>
                             {ele.snippet.title}: 
-                            <iframe id="ytplayer" width="640" height="360"
+                            <iframe width="640" height="360"
                             src={"https://www.youtube.com/embed/" + ele.snippet.id.videoId + "?autoplay=0"}
                             ></iframe>
                         </div>
