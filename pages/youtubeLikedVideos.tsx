@@ -11,7 +11,7 @@ const YoutubeLikedVideos = () => {
           <ResponsiveGrid
             contents={youtubeLikedVideos.data.items.map(
               (ele: any) => {
-                let tempEle = {"content": ele.snippet.title, "link": "https://nodereactpassport.herokuapp.com/api/youtube/popularVideosByChannelId/" + ele.snippet.channelId}
+                let tempEle = {"content": ele.snippet.title, "link": "/youtubeLikedVideo?channelId=" + ele.snippet.channelId}
                 return tempEle
               } 
             )}
