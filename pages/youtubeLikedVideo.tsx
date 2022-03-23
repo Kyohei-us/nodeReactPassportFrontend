@@ -22,11 +22,11 @@ const YoutubeLikedVideo = () => {
                     mainBody.data.items.map((ele: any, index: number) => {
                         if (index < 5){
                             return <div key={index}>
-                                {ele.snippet.title}: 
-                                <iframe height="50vh"
-                                src={"https://www.youtube.com/embed/" + ele.id.videoId + "?autoplay=0"}
+                                {ele.snippet.title}: <br/>
+                                <iframe
+                                    src={"https://www.youtube.com/embed/" + ele.id.videoId + "?autoplay=0"}
                                 ></iframe>
-                            </div>                            
+                            </div>
                         }
                     })
                 }
