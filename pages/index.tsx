@@ -1,6 +1,7 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
+import {Button} from "@mui/material";
 import styles from "../styles/Home.module.css";
 
 const Home: NextPage = () => {
@@ -27,7 +28,9 @@ const Home: NextPage = () => {
         </div>
 
         <div>
-          <Link href="/youtubeLikedVideos">See Liked Videos</Link>
+          <Link href="/youtubeLikedVideos">
+            <Button variant="contained">See Liked Videos</Button>
+          </Link>
         </div>
 
       </main>

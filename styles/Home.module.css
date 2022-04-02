@@ -12,6 +12,10 @@
   align-items: center;
 }
 
+.main > div {
+  margin: 1rem 0;
+}
+
 /* reference: https://getcssscan.com/css-buttons-examples */
 .button24 {
   background: #FF4742;
