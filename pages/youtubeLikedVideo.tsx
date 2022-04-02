@@ -1,6 +1,7 @@
-
+import Typography from "@mui/material/Typography";
 import { useRouter } from "next/router";
 import useFetchYoutubePopularVideos from "../hooks/useFetchYoutubeChannelPopularVideos";
+import styles from "../styles/YoutubeLikedVideo.module.css"
 
 const YoutubeLikedVideo = () => {
     const router = useRouter();
@@ -17,13 +18,15 @@ const YoutubeLikedVideo = () => {
       <main>
         { mainBody ? (
             <>
-                <h1>{mainBody.data.items[0].snippet.channelTitle}</h1>
+                <Typography variant="h2" gutterBottom component="div">
+                  {mainBody.data.items[0].snippet.channelTitle}
+                </Typography>
                 {
                     mainBody.data.items.map((ele: any, index: number) => {
                         if (index < 5){
                             return <div key={index}>
                                 {ele.snippet.title}: <br/>
-                                <iframe
+                                <iframe className={styles.player}
                                     src={"https://www.youtube.com/embed/" + ele.id.videoId + "?autoplay=0"}
                                 ></iframe>
                             </div>
